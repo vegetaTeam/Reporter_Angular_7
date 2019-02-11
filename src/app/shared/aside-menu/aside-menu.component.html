@@ -1,0 +1,44 @@
+<!-- Menu Oculto -->
+<aside *ngIf="!showMenu;else menuDesplegado" class="menu has-fullheight has-background-grey-darker is-absolute is-top">
+  <span (click)="showHideMenu()" class="has-pointer"><fa-icon [icon]="['fa', 'angle-right']" size="2x"
+                                          style="color: lightgrey; margin: 17px"></fa-icon></span>
+</aside>
+<!--Menu Desplegado-->
+<ng-template #menuDesplegado>
+  <aside class="menu has-fullheight has-background-grey-darker is-absolute p-right-1 p-left-1 is-top">
+    <span (click)="showHideMenu()" class="has-pointer">
+         <fa-icon [icon]="['fa', 'angle-left']" size="2x" pull="right"
+                       style="color: lightgrey; padding-right: 10px"></fa-icon>
+    </span>
+    <p class="menu-label">General</p>
+    <ul class="menu-list">
+      <li><a>Dashboard</a></li>
+      <li><a>Customers</a></li>
+    </ul>
+    <p class="menu-label">
+      Administration
+    </p>
+    <ul class="menu-list">
+      <li><a>Team Settings</a></li>
+      <li>
+        <a class="is-active">Manage Your Team</a>
+        <ul>
+          <li><a>Members</a></li>
+          <li><a>Plugins</a></li>
+          <li><a>Add a member</a></li>
+        </ul>
+      </li>
+      <li><a>Invitations</a></li>
+      <li><a>Cloud Storage Environment Settings</a></li>
+      <li><a>Authentication</a></li>
+    </ul>
+    <p class="menu-label">
+      Transactions
+    </p>
+    <ul class="menu-list">
+      <li><a>Payments</a></li>
+      <li><a>Transfers</a></li>
+      <li><a>Balance</a></li>
+    </ul>
+  </aside>
+</ng-template>

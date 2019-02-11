@@ -1,0 +1,27 @@
+<!-- Hero head: will stick at the top -->
+<div class="hero-head has-background-grey-darker has-text-white">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <img src="../../../assets/img/logo.png" alt="Logo">
+        <p class="has-roboto-mono has-text-white is-size-5 has-text-centered m-left-1">Reporter</p>
+      </a>
+      <span (click)="swToggle()" [class.is-active]="isToggleActive" class="navbar-burger burger has-text-grey-light"
+         data-target="navbarReporter">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </span>
+    </div>
+    <div [ngClass]="{'is-active is-absolute': isToggleActive}" (click)="isToggleActive = false" id="navbarReporter" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <span class="has-text-white">{{ user.fullName }}</span>
+          <span (click)="logout()" class="navbar-item has-pointer"><fa-icon [icon]="['fa', 'power-off']" size="1x" pull="right" style="color: #e3ab12; padding-right: 10px"></fa-icon></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+

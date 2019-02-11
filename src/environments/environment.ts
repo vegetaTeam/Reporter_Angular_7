@@ -3,7 +3,20 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  loginTemp: {usuer: 'admin', pass: 'admin'},
+  trello: {
+    userName: 'eloyperez6',
+    trelloAPIKey: '2602eac2f07762e217a795f53641de8e',
+    trelloToken: 'f1dba1e6a2fab3097afddb18187d81281ad5f1c356fe4fa5a88efca5c28f7aa2',
+    urlsServices: {
+      getBoards: 'https://api.trello.com/1/members/',
+      getMemberInfo: 'https://api.trello.com/1/members/'
+    },
+    boardsIds: {
+      migracionRestel: 'RNLr7zwS'
+    }
+  }
 };
 
 /*

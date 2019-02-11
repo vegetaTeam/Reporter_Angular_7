@@ -1,0 +1,115 @@
+@charset "utf-8"
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono')
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700')
+
+// Set your brand colors, fonts and others
+$darker: #4a4a4a
+$dark: #363636
+$family-roboto-mono: 'Roboto Mono', monospace
+$radius-none: 0
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif
+$widescreen-enabled: false
+$fullhd-enabled: true
+$title-color: white
+$subtitle-color: white
+$link: #e3ab12
+$link-hover: #9a740d
+
+// Update some of Bulma's component variables
+$body-background-color: $darker
+$control-border-width: 1px
+$control-radius: 0
+$input-border-color: transparent
+$input-shadow: none
+
+//Custom styles//
+
+//Boxes
+
+.box
+
+  border-radius: $radius-none
+  color: white
+  background-color: $dark
+
+
+//Centerd image
+
+.has-image-centered
+
+  margin-left: auto
+  margin-right: auto
+
+//Absolute position
+
+.is-absolute
+
+  position: absolute
+
+//Vertical align
+
+.is-top
+
+  top: 0
+
+.is-bottom
+
+  bottom: 0
+
+.is-vertical-center
+
+  display: flex
+  align-items: center
+
+//Font family logo
+
+.has-roboto-mono
+
+  font-family: $family-roboto-mono
+
+// Full height
+
+.has-fullheight
+
+  height: 100%
+
+//Pointer
+
+.has-pointer
+
+  cursor: pointer
+
+//Divider
+
+hr
+
+  height: 1px !important
+  background-color: $darker !important
+
+//Spacing helpers
+
+$sizes: (0, 1, 2, 3, 4, 5)
+$post: ('top', 'right', 'bottom', 'left')
+
+@each $size in $sizes
+  @each $pos in $post
+
+    .m-#{$pos}-#{$size}
+      margin-#{$pos}: $size + rem !important
+
+    .p-#{$pos}-#{$size}
+      padding-#{$pos}: $size + rem !important
+
+// Import only what you need from Bulma
+@import "../../node_modules/bulma/sass/utilities/_all.sass"
+@import "../../node_modules/bulma/sass/base/_all.sass"
+@import "../../node_modules/bulma/sass/elements/button.sass"
+@import "../../node_modules/bulma/sass/elements/container.sass"
+@import "../../node_modules/bulma/sass/elements/form.sass"
+@import "../../node_modules/bulma/sass/elements/title.sass"
+@import "../../node_modules/bulma/sass/components/navbar.sass"
+@import "../../node_modules/bulma/sass/layout/hero.sass"
+@import "../../node_modules/bulma/sass/layout/section.sass"

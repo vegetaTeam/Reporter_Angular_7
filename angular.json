@@ -27,7 +27,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "./node_modules/bulma/css/bulma.min.css",
+              "src/sass/styles.sass"
             ],
             "scripts": []
           },
@@ -83,7 +84,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.sass"
+              "src/sass/styles.sass"
             ],
             "scripts": [],
             "assets": [
@@ -135,5 +136,13 @@
       }
     }
   },
-  "defaultProject": "Reporter"
+  "defaultProject": "Reporter",
+  "schematics": {
+    "@schematics/angular:component": {
+      "spec": false
+    },
+    "@schematics/angular:service": {
+      "spec": false
+    }
+  }
 }
