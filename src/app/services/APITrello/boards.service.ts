@@ -12,34 +12,49 @@ import {environment} from "../../../environments/environment";
 export class BoardsService {
 
   public boardSubject = new Subject();
-  private idUser = environment.trello.userName;
+  private params = new HttpParams()
+    .set('key', environment.trello.trelloAPIKey)
+    .set('token', environment.trello.trelloToken);
 
 
   constructor(private httpClient: HttpClient) {
   }
 
-  /**Metodo para cargar la info de un board*/
-  public loadBoard(subRoute) {
+  /**Metodos principales http*/
+  private httpGET(url, params?){
 
-    let params = new HttpParams()
-    .set('key', environment.trello.trelloAPIKey)
-    .set('token', environment.trello.trelloToken);
-
-    this.httpClient.get(`${environment.trello.urlsServices.getBoards + this.idUser + subRoute }`, {params} ).subscribe(
+    this.httpClient.get(url,{params} ).subscribe(
       response => {
         this.boardSubject.next(response)
       },
       error => {
         this.boardSubject.error(error);
       }
-    )
-    ;
+    );
   }
 
-  /**Metodo para subscribirse a la carga de la info de un board+*/
-  public getBoard(): Observable<any> {
+  /**Metodo para subscribirse a la carga de la info de un board*/
+  public subscriptionBoardService(): Observable<any> {
     return this.boardSubject.asObservable();
 
   }
+
+  /**Metodo para cargar todos los boards de un miembro*/
+  public getAllBoardsMember() {
+
+    let url = environment.trello.urlsServices.members + environment.trello.userName + '/boards';
+    this.httpGET(url , this.params);
+
+  }
+
+  /**Metodo para cargar la info de un board concreto*/
+  public getOneBoard() {
+
+    let url = environment.trello.urlsServices.boards + environment.trello.boardsIds.migracionRestel;
+    this.httpGET(url , this.params);
+
+  }
+
+
 
 }

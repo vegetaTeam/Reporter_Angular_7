@@ -1,0 +1,13 @@
+<p class="title">
+  <!--board works! <canvas baseChart-->
+                       <!--[data]="doughnutChartData"-->
+                       <!--[labels]="doughnutChartLabels"-->
+                       <!--[chartType]="doughnutChartType"-->
+                       <!--(chartHover)="chartHovered($event)"-->
+                       <!--(chartClick)="chartClicked($event)"></canvas>-->
+
+</p>
+<h1>{{ board?.name }}</h1>
+<ul>
+  <li *ngFor="let label of board?.labelNames | objToArray"> {{ label }}</li>
+</ul>

@@ -1,0 +1,19 @@
+<!--TEMPLATES DE MODALES-->
+<div [ngSwitch]="modalData.template">
+  <!--MODAL ERROR GENERICO-->
+  <ng-template [ngSwitchCase]="'error'">
+    <div class="modal is-active">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="notification is-warning">
+          <button (click)="closeModal()" class="delete"></button>
+          <strong>Ojito!</strong>
+          <p>Usuario/Contraseña incorrectos.</p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+
+

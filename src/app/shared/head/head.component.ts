@@ -13,15 +13,13 @@ export class HeadComponent implements OnInit {
   public user;
 
   constructor(private router: Router,
-              private _memberService: MembersService) { }
+              public _memberService: MembersService) { }
 
   ngOnInit() {
 
     this._memberService.getMemberInfo().subscribe(
       next => this.user = next
-    );
-
-    this._memberService.loadMemberInfo();
+    )
   }
 
   /**

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
+import {ModalsService} from "../../services/modalsService/modals.service";
 
 @Component({
   selector: 'Reporter-login',
@@ -12,7 +13,8 @@ export class LoginComponent implements OnInit {
   public formLogin: FormGroup;
 
   constructor(private _formBuilder: FormBuilder,
-              private _router: Router) {
+              private _router: Router,
+              private _modalsService: ModalsService) {
   }
 
   ngOnInit() {
@@ -29,7 +31,7 @@ export class LoginComponent implements OnInit {
     if ( formLogin.user === 'Admin' && formLogin.password === 'Admin' ) {
       this._router.navigate(['main']);
     } else {
-      console.log('no login');
+      this._modalsService.showModal('error');
     }
   }
 

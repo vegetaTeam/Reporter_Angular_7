@@ -8,7 +8,8 @@ import {BoardsService} from "../../../services/APITrello/boards.service";
 })
 export class HomeComponent implements OnInit {
 
-  public userBoards;
+  public userBoards: {};
+  public showWaiter:boolean = true;
 
   constructor(
     private _boardService: BoardsService
@@ -16,11 +17,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this._boardService.getBoard().subscribe(
-      next => this.userBoards = next
+    this._boardService.subscriptionBoardService().subscribe(
+      (next) => {
+        this.userBoards = next;
+        this.showWaiter = false;
+      }
     );
 
-    this._boardService.loadBoard('/boards');
+    this._boardService.getAllBoardsMember();
   }
 
 }

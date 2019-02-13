@@ -12,22 +12,27 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import {MembersService} from "./services/APITrello/member.service";
+import {ChartsModule} from "ng2-charts";
+import { ModalsComponent } from './shared/modals/modals.component';
 library.add(fas);
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    ModalsComponent
   ],
   imports: [
+
     AppRoutingModule,
     BrowserModule,
     HttpClientModule,
     MainModule,
     FontAwesomeModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   providers: [BoardsService, MembersService],
   bootstrap: [AppComponent]

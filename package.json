@@ -5,7 +5,6 @@
     "ng": "ng",
     "start": "ng serve -o --port 4220 --host 172.16.43.74 --aot",
     "build": "ng build",
-    "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -23,8 +22,10 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
     "@fortawesome/free-solid-svg-icons": "^5.6.3",
     "bulma": "^0.7.2",
+    "chart.js": "^2.7.3",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
+    "ng2-charts": "^1.6.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "web-animations-js": "^2.3.1",
