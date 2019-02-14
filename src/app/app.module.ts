@@ -24,7 +24,6 @@ library.add(fas);
     ModalsComponent
   ],
   imports: [
-
     AppRoutingModule,
     BrowserModule,
     HttpClientModule,

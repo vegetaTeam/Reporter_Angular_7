@@ -11,6 +11,7 @@ import {FooterComponent} from "../../shared/footer/footer.component";
 import {ObjectsCounterPipe} from "../../utils/pipes/objectsCounter.pipe";
 import {BoardComponent} from './board/board.component';
 import {ChartsModule} from "ng2-charts";
+import {ObjectToArrayPipe} from "../../utils/pipes/objectToArray.pipe";
 
 @NgModule({
   imports: [
@@ -27,6 +28,7 @@ import {ChartsModule} from "ng2-charts";
     FooterComponent,
     AsideMenuComponent,
     ObjectsCounterPipe,
+    ObjectToArrayPipe,
     BoardComponent
   ]
 })

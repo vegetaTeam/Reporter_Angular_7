@@ -7,8 +7,6 @@ export const environment = {
   loginTemp: {usuer: 'admin', pass: 'admin'},
   trello: {
     userName: 'eloyperez6',
-    trelloAPIKey: '2602eac2f07762e217a795f53641de8e',
-    trelloToken: 'f1dba1e6a2fab3097afddb18187d81281ad5f1c356fe4fa5a88efca5c28f7aa2',
     urlsServices: {
       boards: 'https://api.trello.com/1/boards/',
       members: 'https://api.trello.com/1/members/'
