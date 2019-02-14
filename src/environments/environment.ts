@@ -6,13 +6,13 @@ export const environment = {
   production: false,
   loginTemp: {usuer: 'admin', pass: 'admin'},
   trello: {
-    userName: 'eloyperez6',
+
     urlsServices: {
       boards: 'https://api.trello.com/1/boards/',
       members: 'https://api.trello.com/1/members/'
     },
     boardsIds: {
-      migracionRestel: 'RNLr7zwS'
+
     }
   }
 };
