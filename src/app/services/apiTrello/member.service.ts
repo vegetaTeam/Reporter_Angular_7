@@ -11,15 +11,13 @@ import {environment} from "../../../environments/environment";
 /**Servicio para la obtencion de info y boards de un usuario*/
 export class MembersService {
 
-  private idUser = environment.trello.userName;
-  private membersUrl = environment.trello.urlsServices.members + this.idUser;
-
   constructor(private httpClient: HttpClient) {
   }
 
   /**Metodo para cargar la info de usuario*/
-  public getMemberInfo = (): Observable<any> => {
-    return this.httpClient.get(this.membersUrl);
+  public getMemberInfo = (userId): Observable<any> => {
+    let url = environment.apiTrello.urlsServices.members + userId;
+    return this.httpClient.get(url);
   }
 
 }

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {BoardsService} from "../../../services/APITrello/boards.service";
+import {BoardsService} from "../../../services/apiTrello/boards.service";
 
 @Component({
   selector: 'Reporter-board',
@@ -19,11 +19,11 @@ export class BoardComponent implements OnInit {
 
   ngOnInit() {
 
-    this._boardsService.subscriptionBoardService().subscribe(
-      next => this.board = next
-    );
-
-    this._boardsService.getOneBoard();
+    // this._boardsService.subscriptionBoardService().subscribe(
+    //   next => this.board = next
+    // );
+    //
+    // this._boardsService.getOneBoard();
 
   }
 

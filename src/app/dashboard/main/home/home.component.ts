@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {BoardsService} from "../../../services/APITrello/boards.service";
+import {BoardsService} from "../../../services/apiTrello/boards.service";
 
 @Component({
   selector: 'Reporter-home',
@@ -17,14 +17,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this._boardService.subscriptionBoardService().subscribe(
-      (next) => {
-        this.userBoards = next;
-        this.showWaiter = false;
-      }
-    );
+    // this._boardService.subscriptionBoardService().subscribe(
+    //   (next) => {
+    //     this.userBoards = next;
+    //     this.showWaiter = false;
+    //   }
+    // );
 
-    this._boardService.getAllBoardsMember();
+    // this._boardService.getAllBoardsMember();
   }
 
 }

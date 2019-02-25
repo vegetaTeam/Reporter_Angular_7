@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {MembersService} from "../../services/APITrello/member.service";
+import {MembersService} from "../../services/apiTrello/member.service";
 
 @Component({
   selector: 'Reporter-head',
@@ -17,9 +17,9 @@ export class HeadComponent implements OnInit {
 
   ngOnInit() {
 
-    this._memberService.getMemberInfo().subscribe(
-      next => this.user = next
-    )
+    // this._memberService.getMemberInfo().subscribe(
+    //   next => this.user = next
+    // )
   }
 
   /**
@@ -33,6 +33,7 @@ export class HeadComponent implements OnInit {
    * Logout de la app
    * */
   public logout(){
+    localStorage.clear();
     this.router.navigate(['']);
   }
 

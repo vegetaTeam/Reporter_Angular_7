@@ -13,8 +13,8 @@ export class BoardsService {
 
   public boardSubject = new Subject();
   private params = new HttpParams()
-    .set('key', environment.trello.trelloAPIKey)
-    .set('token', environment.trello.trelloToken);
+    .set('key', localStorage.getItem('apiT'))
+    .set('token', localStorage.getItem('tokenT'));
 
 
   constructor(private httpClient: HttpClient) {
@@ -40,17 +40,17 @@ export class BoardsService {
   }
 
   /**Metodo para cargar todos los boards de un miembro*/
-  public getAllBoardsMember() {
+  public getAllBoardsMember(userId) {
 
-    let url = environment.trello.urlsServices.members + environment.trello.userName + '/boards';
+    let url = environment.apiTrello.urlsServices.members + userId + '/boards';
     this.httpGET(url , this.params);
 
   }
 
   /**Metodo para cargar la info de un board concreto*/
-  public getOneBoard() {
+  public getOneBoard(boardId) {
 
-    let url = environment.trello.urlsServices.boards + environment.trello.boardsIds.migracionRestel;
+    let url = environment.apiTrello.urlsServices.boards + boardId;
     this.httpGET(url , this.params);
 
   }

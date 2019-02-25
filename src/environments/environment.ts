@@ -4,15 +4,14 @@
 
 export const environment = {
   production: false,
-  loginTemp: {usuer: 'admin', pass: 'admin'},
-  trello: {
+  apiReporter:{
+    url: 'http://localhost:3001'
+  },
+  apiTrello: {
 
     urlsServices: {
       boards: 'https://api.trello.com/1/boards/',
       members: 'https://api.trello.com/1/members/'
-    },
-    boardsIds: {
-
     }
   }
 };
