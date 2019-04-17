@@ -1,38 +1,38 @@
 //Waiter de carga
-<fa-icon *ngIf="showWaiter" [icon]="['fa', 'spinner']" [spin]="true" size="5x" style="color: #e3ab12;"></fa-icon>
+<fa-icon *ngIf="false" [icon]="['fa', 'spinner']" [spin]="true" size="5x" style="color: #e3ab12;"></fa-icon>
 //Contenido Principal
 <main class="column">
-  <div *ngIf="!showWaiter" class="columns is-multiline">
+  <div *ngIf="true" class="columns is-multiline">
     <div class="column is-4">
-      <div *ngFor="let board of userBoards" class="box">
+      <div class="box">
         <div class="heading">Tableros</div>
         <hr/>
         <div class="subtitle">
-          <h1>{{ board.name }}</h1>
+          <h1>board name</h1>
         </div>
         <div class="level">
           <div class="level-item">
             <div class="">
               <div class="heading">Visibilidad</div>
-              <div class="is-5 is-capitalized">{{ board.prefs.permissionLevel }}</div>
+              <div class="is-5 is-capitalized">permisos</div>
             </div>
           </div>
           <div class="level-item">
             <div class="">
               <div class="heading">Última Actividad</div>
-              <div class="is-5">{{ board.dateLastActivity | date: 'M/d/yy, H:MM'}}</div>
+              <div class="is-5">ultima actividad</div>
             </div>
           </div>
           <div class="level-item">
             <div class="">
               <div class="heading">Nº Miembros</div>
-              <div class="is-5">{{ board.memberships | objectsCounter }}</div>
+              <div class="is-5">numero miembros</div>
             </div>
           </div>
         </div>
         <div class="level">
           <div class="level-item has-text-centered">
-            <a [href]=board.url  target="_blank">Ver en Trello</a>
+            <a href="www.google.es"  target="_blank">Ver en Trello</a>
           </div>
           <div class="level-item">
             <a routerLink="/main/board">Más Información</a>
@@ -41,83 +41,5 @@
         <hr/>
       </div>
     </div>
-    <!--<div class="column">-->
-      <!--<div class="box">-->
-        <!--<div class="heading">Revenue / Expenses</div>-->
-        <!--<div class="title">55% / 45%</div>-->
-        <!--<div class="level">-->
-          <!--<div class="level-item">-->
-            <!--<div class="">-->
-              <!--<div class="heading">Rev Prod $</div>-->
-              <!--<div class="title is-5">30%</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="level-item">-->
-            <!--<div class="">-->
-              <!--<div class="heading">Rev Serv $</div>-->
-              <!--<div class="title is-5">25%</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="level-item">-->
-            <!--<div class="">-->
-              <!--<div class="heading">Exp %</div>-->
-              <!--<div class="title is-5">45%</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="column">-->
-      <!--<div class="box">-->
-        <!--<div class="heading">Feedback Activity</div>-->
-        <!--<div class="title">78% &uarr;</div>-->
-        <!--<div class="level">-->
-          <!--<div class="level-item">-->
-            <!--<div class="">-->
-              <!--<div class="heading">Positive</div>-->
-              <!--<div class="title is-5">1560</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="level-item">-->
-            <!--<div class="">-->
-              <!--<div class="heading">Negative</div>-->
-              <!--<div class="title is-5">368</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="level-item">-->
-            <!--<div class="">-->
-              <!--<div class="heading">Pos/Neg %</div>-->
-              <!--<div class="title is-5">77% / 23%</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="column">-->
-      <!--<div class="box">-->
-        <!--<div class="heading">Orders / Returns</div>-->
-        <!--<div class="title">75% / 25%</div>-->
-        <!--<div class="level">-->
-          <!--<div class="level-item">-->
-            <!--<div class="">-->
-              <!--<div class="heading">Orders $</div>-->
-              <!--<div class="title is-5">425,000</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="level-item">-->
-            <!--<div class="">-->
-              <!--<div class="heading">Returns $</div>-->
-              <!--<div class="title is-5">106,250</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="level-item">-->
-            <!--<div class="">-->
-              <!--<div class="heading">Success %</div>-->
-              <!--<div class="title is-5">+ 28,5%</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
   </div>
 </main>

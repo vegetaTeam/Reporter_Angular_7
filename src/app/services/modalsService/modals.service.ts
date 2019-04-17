@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable, Subject} from "rxjs";
-import {Modal} from "../../models/modals";
+import {Modal} from "../../shared/models/modals";
 
 @Injectable({
   providedIn: 'root'

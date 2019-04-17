@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {MembersService} from "../../services/apiTrello/member.service";
 
 @Component({
   selector: 'Reporter-head',
@@ -12,15 +11,9 @@ export class HeadComponent implements OnInit {
   public isToggleActive: boolean = false;
   public user;
 
-  constructor(private router: Router,
-              public _memberService: MembersService) { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
-
-    // this._memberService.getMemberInfo().subscribe(
-    //   next => this.user = next
-    // )
-  }
+  ngOnInit() {}
 
   /**
    * Muestra o oculta el toogle asignandole el valor contrario que tenga el isToggleActive.

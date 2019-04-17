@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {BoardsService} from "./services/apiTrello/boards.service";
 import {HttpClientModule} from "@angular/common/http";
 import { NotFoundComponent } from './dashboard/not-found/not-found.component';
 import {LoginComponent} from "./dashboard/login/login.component";
@@ -11,8 +10,6 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import {MembersService} from "./services/apiTrello/member.service";
-import {ChartsModule} from "ng2-charts";
 import { ModalsComponent } from './shared/modals/modals.component';
 library.add(fas);
 
@@ -30,10 +27,9 @@ library.add(fas);
     MainModule,
     FontAwesomeModule,
     ReactiveFormsModule,
-    FormsModule,
-    ChartsModule
+    FormsModule
   ],
-  providers: [BoardsService, MembersService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

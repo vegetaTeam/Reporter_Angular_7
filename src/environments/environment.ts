@@ -3,17 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  apiReporter:{
-    url: 'http://localhost:3001'
-  },
-  apiTrello: {
-
-    urlsServices: {
-      boards: 'https://api.trello.com/1/boards/',
-      members: 'https://api.trello.com/1/members/'
-    }
-  }
+  production: false
 };
 
 /*

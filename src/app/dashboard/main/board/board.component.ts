@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {BoardsService} from "../../../services/apiTrello/boards.service";
 
 @Component({
   selector: 'Reporter-board',
@@ -8,33 +7,9 @@ import {BoardsService} from "../../../services/apiTrello/boards.service";
 })
 export class BoardComponent implements OnInit {
 
-  public board;
-  // Doughnut
-  public doughnutChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
-  public doughnutChartData: number[] = [350, 450, 100];
-  public doughnutChartType: string = 'doughnut';
-
-  constructor(private _boardsService: BoardsService) {
-  }
+  constructor() {}
 
   ngOnInit() {
-
-    // this._boardsService.subscriptionBoardService().subscribe(
-    //   next => this.board = next
-    // );
-    //
-    // this._boardsService.getOneBoard();
-
-  }
-
-
-  // events
-  public chartClicked(e: any): void {
-    console.log(e);
-  }
-
-  public chartHovered(e: any): void {
-    console.log(e);
   }
 
 

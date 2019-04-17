@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ModalsService} from "./services/modalsService/modals.service";
-import {Modal} from "./models/modals";
+import {Modal} from "./shared/models/modals";
 
 @Component({
   selector: 'Reporter-root',
